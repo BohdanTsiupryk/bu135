@@ -54,6 +54,9 @@ class GitService(
             try {
                 val generateCommitMessage = generateCommitMessage(it.pref)
 
+                git.pull()
+                        .setTransportConfigCallback(transportConfig)
+                        .call()
                 git.add().addFilepattern(".").call()
                 git.commit().setMessage(generateCommitMessage).call()
                 git.push()
