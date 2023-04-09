@@ -1,0 +1,25 @@
+settings:
+  #scheduler cron expression ((0 0 12 * * *) every day at 12pm)
+  schedule: "0 0 12 * * *"
+  ssh:
+    # path to private ssh key
+    file: "E:\\testbu135\\test"
+    passphrase: ""
+
+git:
+  folders:
+   - path: "E:\\testbu135"
+     pref: "test1"
+     # git remote name or path
+     remote: "origin"
+   - path: "E:\\test2"
+     pref: "test2"
+     # git remote name or path
+     remote: "origin"
+logging:
+  file:
+    name: app.log
+    path:
+  level:
+    bts: INFO
+  config: classpath:logback-spring.xml
