@@ -10,7 +10,7 @@ data class AppConfigData(
 
 @ConfigurationProperties(prefix = "git")
 data class GitData(
-        var folders: List<Folders> = ArrayList()
+        var folders: List<Folder> = ArrayList()
 )
 
 data class SshData(
@@ -18,7 +18,7 @@ data class SshData(
         var passphrase: String,
 )
 
-data class Folders(
+data class Folder(
         var path: String,
         var pref: String,
         var remote: String?,

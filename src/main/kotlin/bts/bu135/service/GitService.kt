@@ -22,7 +22,7 @@ import java.time.format.DateTimeFormatter
 
 @Service
 class GitService(
-        val appData : AppConfigData,
+        val appData: AppConfigData,
         val gitData: GitData,
 ) {
 
