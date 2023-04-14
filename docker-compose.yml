@@ -1,0 +1,17 @@
+version: '3'
+services:
+  postgres:
+    build: postgres/
+    ports:
+      - 5432:5432
+    restart: always
+
+  server:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/journal
